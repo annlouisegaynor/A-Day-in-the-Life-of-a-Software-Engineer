@@ -1,0 +1,739 @@
+<html>
+	<head>
+		<title>Software Engineering</title>
+		
+		<!-- Latest compiled and minified CSS (Bootsrap) -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Optional theme (Bootstrap)-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		
+		<!-- LINKED JS FILES -->
+		<script type="text/javascript" src="js/modernizr.custom.28468.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+		<!-- LINKED CSS FILES -->
+		<link rel="stylesheet" type="text/css" href="css/file.css" />
+		<link rel="stylesheet" type="text/css" href="css/timelineCSS.css" />
+		<link rel="stylesheet" type="text/css" href="css/navbar.css" />
+		<link rel="stylesheet" type="text/css" href="css/qualities.css" />
+		<link rel="stylesheet" type="text/css" href="css/the-se.css" />
+		<link rel="stylesheet" type="text/css" href="css/mteam.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+
+		<!-- <link rel="stylesheet" type="text/css" href="css/animate.css" /> -->
+
+		<!-- FONTS -->
+		
+
+		<!--Temporary CSS-->
+		<style>
+		@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+			#logo {
+			  color: #fff;
+			  padding: 20px;
+			  font-size: 18px;
+			  transition: all ease .5s;
+			}
+
+			#home {
+				background: url("images/landingpage-FINAL.png") no-repeat center center fixed;
+				opacity: 0.9;
+				display: table;
+				height: 100%;
+				position: relative;
+				width: 100%;
+				background-size: cover;
+			}
+
+			#timeline-of-jobs{
+				background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj4KPHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9IiMxQzJEM0QiPjwvcmVjdD4KPGcgZmlsbD0ibm9uZSI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMSIgeT0iMjAiPjwvcmVjdD4KPHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxIiB5PSI0MCI+PC9yZWN0Pgo8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEiIHk9IjYwIj48L3JlY3Q+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMSIgeT0iODAiPjwvcmVjdD4KPHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMTAwIiB4PSIyMCI+PC9yZWN0Pgo8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxMDAiIHg9IjQwIj48L3JlY3Q+CjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEwMCIgeD0iNjAiPjwvcmVjdD4KPHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMTAwIiB4PSI4MCI+PC9yZWN0Pgo8L2c+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSJub25lIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZT0iI2ZmZiI+PC9yZWN0Pgo8L3N2Zz4=")repeat center center fixed;
+				opacity: 0.9;
+				display: table;
+				height: 100%;
+				position: relative;
+				width: 100%;
+			}
+			
+			
+			.text-vcenter {			
+				display: table-cell;
+				text-align: center;
+				vertical-align: middle;
+				color: white;
+				font-size: 30px;
+			}
+
+			
+			/*CSS FOR ANIMATED TEXT*/
+			#home p{
+                color: white;
+                font-family: 'Roboto', sans-serif;
+                text-transform: uppercase;
+                position: absolute;
+                left: 25%;
+                top: 40%;
+                letter-spacing: 30px;
+            }
+            .fly-in-text {
+                list-style: none;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translateX(-50%) translateY(-50%);
+            }
+            .fly-in-text li {
+                display: inline-block;
+                margin-right: 60px;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 300;
+                font-size: 2em;
+                color: #fff;
+                opacity: 1;
+                transition: all 2.5s ease;
+            }
+            .fly-in-text li:last-child {
+                margin-right: 0;
+            }
+            .fly-in-text.texthidden li {
+                opacity: 0;
+            }
+            .fly-in-text.texthidden li:nth-child(1) { transform: translateX(-200px) translateY(-200px); }
+            .fly-in-text.texthidden li:nth-child(2) { transform: translateX(20px) translateY(100px); }
+            .fly-in-text.texthidden li:nth-child(3) { transform: translateX(-150px) translateY(-80px); }
+            .fly-in-text.texthidden li:nth-child(4) { transform: translateX(10px) translateY(-200px); }
+            .fly-in-text.texthidden li:nth-child(5) { transform: translateX(-300px) translateY(200px); }
+            .fly-in-text.texthidden li:nth-child(6) { transform: translateX(20px) translateY(-20px); }
+            .fly-in-text.texthidden li:nth-child(7) { transform: translateX(30px) translateY(200px); }
+            .fly-in-text.texthidden li:nth-child(8) { transform: translateX(40px) translateY(-100px); }
+
+            .dropdown-menu:li {
+    text-align: left;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; 
+ }
+
+
+            /*CSS FOR ANIMATED TEXT*/
+
+			/*
+			#loader{
+			font: 300 4em/150% Impact;
+			margin: auto;
+			padding-top: 15%;
+			text-align: center;
+			background: white;
+			height: 100%;
+			}
+			
+			.loading:after {
+				content: '.';
+				animation: dots 1s steps(5, end) infinite;
+			}
+			
+			@keyframes dots {
+			  0%, 20% {
+				color: rgba(0,0,0,0);
+				text-shadow:
+				  .25em 0 0 rgba(0,0,0,0),
+				  .5em 0 0 rgba(0,0,0,0);
+			}
+
+			  40% {
+				color: black;
+				text-shadow:
+				  .25em 0 0 rgba(0,0,0,0),
+				  .5em 0 0 rgba(0,0,0,0);
+			  }
+			  
+			  60% {
+				text-shadow:
+				  .25em 0 0 black,
+				  .5em 0 0 rgba(0,0,0,0);
+			  }
+			  
+			  80%, 100% {
+				text-shadow:
+				  .25em 0 0 black,
+				  .5em 0 0 black;
+			  }
+			}
+
+			#myDiv {
+				display: none;
+				text-align: center;
+			}
+			
+			.animate-bottom {
+				position: relative;
+			-webkit-animation-name: animatebottom;
+			-webkit-animation-duration: 1s;
+			animation-name: animatebottom;
+			animation-duration: 1s
+			}
+
+			@-webkit-keyframes animatebottom {
+			  from { bottom:-100px; opacity:0 } 
+			  to { bottom:0px; opacity:1 }
+			}
+
+			@keyframes animatebottom { 
+			  from{ bottom:-100px; opacity:0 } 
+			  to{ bottom:0; opacity:1 }
+			}
+
+			*/
+		</style>
+	</head>
+	
+	<!-- onload="myFunction()" style="margin:0;" -->
+	<body onload="change()">
+	
+	<!--LOADING PAGE 
+	<div id="loader"><h3> <font color="black"> Loading... </font> </h3>
+		<img src="images/tempo.pngHAHAHAHCUTIE.gif" width=15% height=30%>
+		<p class="loading"> </p>
+	</div>
+	//LOADING PAGE -->
+
+
+	<!-- MAIN PAGE -->
+	<!--<div style="display:none;" id="myDiv" class="animate-bottom">
+
+		<!-- NAVBAR -->
+		  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+		      <div class="container">
+		        <div class="navbar-header">
+		          <button type="button" class="navbar-toggle" data-toggle="collapse" 
+					data-target=".navbar-collapse">
+			            <span class="sr-only">Toggle navigation</span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+		          </button>
+		          <a class="navbar-brand" href="#">Website name</a>
+		        </div>
+		        <div class="collapse navbar-collapse">
+		          <ul class="nav navbar-nav pull-right">
+		            <li><a href="#home">Home</a></li>
+		            <li class="dropdown"> <a href="#changeBG" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Chapters <span class="caret"></span></a>
+		            <ul class="dropdown-menu">
+		            	<li> <a href="#changeBG"> Qualities of a SE </a></li>
+		            	<li> <a href="#timeline-of-jobs"> Jobs of an SE </a></li>
+
+		            </ul>
+		            </li>
+			            <li><a href="#footer">Contact</a></li>
+		          </ul>
+		        </div>
+		      </div>
+			
+		</div>
+		<!-- END OF NAVBAR -->
+		<div class="spacer"></div>
+
+
+		<!-- first section - LANDING PAGE --> 
+		
+
+			<div id="startchange">
+			<div id="home" class="home">
+				<div class="text-vcenter">
+					<p> THE LIFE OF A SOFTWARE </p>
+			        <ul class="fly-in-text texthidden">
+
+			            <li>E</li>
+			            <li>N</li>
+			            <li>G</li>
+			            <li>I</li>
+			            <li>N</li>
+			            <li>E</li>
+			            <li>E</li>
+			            <li>R</li>
+			        </ul>
+				</div>
+			</div>
+		</div>	
+		</div>
+
+		
+		<!-- second section - QUALITIES OF A SE-->
+
+		
+			<div id="changeBG" class="changeBG">
+				<div id="canvas">
+					<div id='stars'></div>
+					<div id='stars2'></div>
+					<div id='stars3'></div>
+				</div>
+					 <p class="engineer-is-">A SOFTWARE ENGINEER IS &nbsp</p>
+					  <!-- INSERT PIC HERE IF YOU WANT 
+					  	<img class="icon" src="images/gif1.gif"/>
+					  -->
+					  	<!-- ADD WORDS HERE -->
+					<span class="word wisteria">passionate.</span>
+					<span class="word belize">determined.</span>
+					<span class="word pomegranate">up-to-date.</span>
+					<span class="word green">creative.</span>
+					<span class="word midnight">curious.</span>
+					<span class="word wisteria">innovative.</span>
+			</div>
+      	<!-- /second section -->
+
+		<!-- third section - TIMELINE OF WHAT SEs DO -->
+			<div id="timeline-of-jobs">
+				<section class="timeline">
+				<p>&nbsp&lt THE CREATIVE PROCESS OF SOFTWARE ENGINEERS &gt</p>
+				  <ul>
+				    <li id="timeline-plan">
+				      <div class="grid">
+							<figure class="effect-apollo">
+								<!-- INSERT PIC HERE --> 
+								<img src="images/plan.svg" alt="img12" width="490px" height="323px">
+				        		<figcaption> <!-- EDIT TEXT HERE -->
+									<p class="description">
+									PLAN			
+								</figcaption>			
+							</figure>						
+				      </div>
+				      <div class="bottom-half" id="pup">
+				       		<a href="#planning" class="button">curious ?
+				       		<span> 
+				       		SYSTEM ANALYSIS<br>
+				       		 The goal of system analysis is to determine where the problem is in an attempt to fix the system. This step involves breaking down the system in different pieces to analyze the situation, analyzing project goals, breaking down what needs to be created and attempting to engage users so that definite requirements can be defined.
+				       		</span> </a>				
+				      </div>
+				    </li>
+
+				    <li id="timeline-design">
+				      <div class="grid">
+							<figure class="effect-apollo">
+								<!-- INSERT PIC HERE --> <img src="images/design.svg" alt="img12" width="490px" height="323px">
+				        		<figcaption> <!-- EDIT TEXT HERE -->
+									<p class="description">
+										DESIGN
+									</p>
+								</figcaption>	
+							</figure>
+						</div>
+				      <div class="bottom-half" id="pup">
+				       		<a href="#planning" class="button">curious ?
+				       		<span> 
+				       		DESIGN <br>
+				       		 In systems design the design functions and operations are described in detail, including screen layouts, business rules, process diagrams and other documentation. The output of this stage will describe the new system as a collection of modules or subsystems. 
+				       		</span> </a>				
+				      </div>
+				    </li>
+
+
+				    <li id="timeline-implement">
+				      <div class="grid">
+							<figure class="effect-apollo">
+								<!-- INSERT PIC HERE --> <img src="images/maintain2.svg" alt="img12" width="490px" height="323px">
+				        		<figcaption> <!-- EDIT TEXT HERE -->
+									<p class="description">
+										IMPLEMENT
+									</p>
+								</figcaption>			
+							</figure>
+						</div>
+				      <div class="bottom-half" id="pup">
+				       		<a href="#planning" class="button">curious ?
+				       		<span> 
+				       		IMPLEMENT <br> 
+				       		Modular and subsystem programming code will be accomplished during this stage. Unit testing and module testing are done in this stage by the developers. This stage is intermingled with the next in that individual modules will need testing before integration to the main project.
+				       		</span> </a>				
+				      </div>
+				    </li>
+
+
+				   <li id="timeline-test">
+				      <div class="grid">
+							<figure class="effect-apollo">
+								<!-- INSERT PIC HERE --> <img src="images/test.svg" alt="img12" width="490px" height="323px">
+				        		<figcaption> <!-- EDIT TEXT HERE -->
+									<p class="description">
+										TEST
+									</p>
+								</figcaption>	
+							</figure>
+						</div>
+				      <div class="bottom-half" id="pup">
+				       		<a href="#planning" class="button">curious ?
+				       		<span> 
+				       		TEST <br>
+				       			Once the application is migrated to a test environment, different types of testing will be performed including integration and system testing.  User acceptance testing is the last part of testing and is performed by the end users to ensure the system meets their expectations.  At this point, defects may be found and more work may be required in the analysis, design or coding.  Once sign-off is obtained by all relevant parties, implementation and deployment can begin.
+				       		</span> </a>				
+				      </div>
+				    </li>
+
+					<li id="timeline-maintain">
+				    	<div class="grid">
+							<figure class="effect-apollo">
+								<!-- INSERT PIC HERE --> <img src="images/maintain.svg" alt="img12" width="490px" height="323px">
+				        		<figcaption> <!-- EDIT TEXT HERE -->
+									<p class="description">
+										MAINTAIN
+									</p>
+								</figcaption>			
+							</figure>
+						</div>
+				      <div class="bottom-half" id="pup">
+				       		<a href="#planning" class="button">curious ?
+				       		<span> 
+				       		MAINTENANCE <br>
+				       		 The deployment of the system includes changes and enhancements before the decommissioning or sunset of the system. Maintaining the system is an important aspect of SDLC. As key personnel change positions in the organization, new changes will be implemented, which will require system updates.
+				       		</span> </a>				
+				      </div>
+				    </li>
+				</ul>
+				<p>&lt\THE CREATIVE PROCESS OF SOFTWARE ENGINEERS &gt</p>
+			</section>
+		</div>
+			
+				<div class="the-se" id="the-se">
+
+						<img class="images/pic1.jpg" width="100%" height="100%">
+					
+				</div>
+		<!-- /third section -->
+ 		
+ 		<!-- fourth section - FAMOUS SEs 
+ 		<div id="famousSE">
+	 		<div id="slider">
+			  <div class="slides">
+			    <div class="slider">
+			      <div class="legend"></div>
+			      <div class="content">
+			        <div class="content-txt">
+			          <h1>Linus Benedict Torvalds</h1>
+			          <h2>a Finnish software engineer who is the creator and, for a long time, principal developer, of the Linux kernel; which became the kernel for operating systems such as the Linux operating system, Android and Chrome OS. He also created the distributed revision control system Git and the diving logging and planning software Subsurface.</h2>
+			        </div>
+			      </div>
+			      <div class="image">
+			        <img src="http://www.computerra.ru/wp-content/uploads/2013/09/200913-1.jpg">
+			      </div>
+			    </div>
+			    <div class="slider">
+			      <div class="legend"></div>
+			      <div class="content">
+			        <div class="content-txt">
+			          <h1>Marc Andreessen</h1>
+			          <h2> is an American entrepreneur, investor, and software engineer. He is the co-author of Mosaic, the first widely used Web browser; co-founder of Netscape and co-founder and general partner of Silicon Valley venture capital firm Andreessen Horowitz. He founded and later sold the software company Opsware to Hewlett-Packard. </h2>
+			        </div>
+			      </div>
+			      <div class="image">
+			        <img src="http://specials-images.forbesimg.com/imageserve/39114749/1280x868.jpg?fit=scale">
+			      </div>
+			    </div>
+			    <div class="slider">
+			      <div class="legend"></div>
+			      <div class="content">
+			        <div class="content-txt">
+			          <h1>Eric Schmidt</h1>
+			          <h2>is an American software engineer, a businessperson, and the Executive Chairman of Alphabet, Inc. In 2016, As an intern at Bell Labs, Schmidt did a complete re-write of Lex. From 1997 to 2001, he was Chief Executive Officer (CEO) of Novell. From 2001 to 2011, Schmidt served as the CEO of Google.</h2>
+			        </div>
+			      </div>
+			      <div class="image">
+			        <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2013/05/19/22/Eric-Schmidt-AFP-Getty.jpg">
+			      </div>
+			    </div>
+			    <div class="slider">
+			      <div class="legend"></div>
+			      <div class="content">
+			        <div class="content-txt">
+			          <h1>Michael Widenius</h1>
+			          <h2>is the main author of the original version of the open source MySQL database, a founding member of the MySQL AB company and is currently CTO of the MariaDB Corporation Ab.</h2>
+			        </div>
+			      </div>
+			      <div class="image">
+			        <img src="https://i.ytimg.com/vi/ZRgWbeY9z_Y/maxresdefault.jpg">
+			      </div>
+			    </div>
+			  </div>
+			  <div class="switch">
+			    <ul>
+			      <li>
+			        <div class="on"></div>
+			      </li>
+			      <li></li>
+			      <li></li>
+			      <li></li>
+			    </ul>
+			  </div>
+			</div>
+		</div>
+			fourth section - FAMOUS SEs -->
+      <!-- fifth section - MEET THE TEAM -->
+		<div class="meetTheTeam">
+		    <div align="center" ><h1><font size="200">MEET THE TEAM</font></h1></div>
+		    
+		    <br>
+		    <br>
+		    <table align="center" class="groupMembers">
+		    	<tr>
+			    	<th class="member">
+			    		<img id="ann" src="images/ann.jpg" class = "memberIndiv">
+			    	</th>
+			    	<th class = "member">
+			    		<img id= "keno" src="images/keno.jpg" class = "memberIndiv">
+			    	</th>
+			    	<th class = "member">
+			    		<img id="chynna" src="images/chynna.jpg" class = "memberIndiv">
+			    	</th>
+		    	</tr>
+		    	
+		    	<tr class="names">
+			    	<th><h3>Ann-Louise Gaynor</h3></th>
+			    	<th><h3 style="padding-left: 40px">Fennald Neffe</h3></th>
+			    	<th><h3>Chynna Sevilleno</h3></th>
+	            <tr>
+
+	            <tr class="social">
+		            <td>
+							<div class="col-md-12">
+			                    <ul class="social-network social-circle">
+			                        <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+			                        <li><a href="https://twitter.com/passthenoodles" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+			                        <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+			                    </ul>				
+							</div>
+		            </td>
+		            <td>
+							<div class="col-md-12">
+			                    <ul class="social-network social-circle">
+			                        <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+			                        <li><a href="https://twitter.com/keno_neffe" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+			                        <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+			                    </ul>				
+							</div>
+		            </td>
+		            <td>
+		            		<div class="col-md-12">
+			                    <ul class="social-network social-circle">
+			                        <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+			                        <li><a href="https://twitter.com/ChynnaSevilleno" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+			                        <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+			                    </ul>				
+							</div>
+
+		            </td>
+	            </tr>   	
+		    </table>
+		</div>
+	<!-- /fourth section -->
+
+
+
+
+	<!-- fourth section -FOOTER -->
+		<footer class="footer-bs" id="footer">
+		    <div class="row">
+		        <div class="col-sm-5 .col-md-6 footer-brand animated fadeInLeft">
+		            <h4>Say Something!</h4>
+		            <p>
+		            	<img src="images/msgicon.png">
+		                <div class="input-group">
+		                    <input type="text" class="form-control" placeholder="Email...">
+		                    <input type="text" class="form-control" placeholder="Message...">
+		                    <span class="input-group-btn">
+		                    	<button id="button1" class="btn btn-default pull-right" type="button"><span class="glyphicon glyphicon-envelope"></span></button>
+		                     </span>
+		                </div><!-- /input-group -->
+		            </p>
+		        </div>
+
+		        	<div class="col-md-4 footer-nav animated fadeInUp">
+		            	<h4>Menu —</h4>
+		            	<div class="col-md-6">
+		                    <ul class="pages">
+		                        <li><a href="#">Home</a></li>
+		                        <li><a href="#chapter1">Chapters</a></li>
+		                        <li><a href="#team">Team</a></li>
+		                        <li><a href="#contactUs">Contact</a></li>
+		                    </ul>
+		                </div>
+		            </div>
+		    </div>
+		</footer>
+		<div id="sub-floor">
+			<div class="container">
+				<div class="row">
+				    <div class="col-md-4 copyright"> Copyright © 2017 </div>
+				        <div class="col-md-4 col-md-offset-4 attribution">
+				            Developed by  <a target="_blank" href="#team">Gaynor, Neffe and Sevilleno</a> .
+				        </div>
+				    </div> <!-- end .row -->
+				</div>
+		</div>	
+		<!-- /fourth section -->
+	</div>
+
+
+
+	<!-- this script is for the content page to show after the loading screen
+		<script> 
+			var myVar;
+
+			function myFunction() {
+				myVar = setTimeout(showPage, 1000);
+			}
+
+			function showPage() {
+			  document.getElementById("loader").style.display = "none";
+			  document.getElementById("myDiv").style.display = "block";
+			}
+		</script>	
+	-->
+
+
+	<script> //this script is for the navBar
+		$(document).ready(function(){       
+			var scroll_start = 0;
+			var startchange = $('#startchange');
+			var offset = startchange.offset();
+			    if (startchange.length){
+			   		$(document).scroll(function() { 
+			      		scroll_start = $(this).scrollTop();
+			      		if(scroll_start > offset.top) {
+			          		$(".navbar-default").css('background-color', '#f0f0f0');
+			       		} else {
+			          		$('.navbar-default').css('background-color', 'transparent');
+			       			}
+			   		});
+			    }
+			});
+	</script>
+
+
+
+
+	<script> //This script is for the timeline
+			(function() {
+
+			  'use strict';
+
+			  // define variables
+			  var items = document.querySelectorAll(".timeline li");
+
+			  // check if an element is in viewport
+			  // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+			  function isElementInViewport(el) {
+			    var rect = el.getBoundingClientRect();
+			    return (
+			      rect.top >= 0 &&
+			      rect.left >= 0 &&
+			      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+			      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+			    );
+			  }
+
+			  function callbackFunc() {
+			    for (var i = 0; i < items.length; i++) {
+			      if (isElementInViewport(items[i])) {
+			        items[i].classList.add("in-view");
+			      }
+			    }
+			  }
+
+			  // listen for events
+			  window.addEventListener("load", callbackFunc);
+			  window.addEventListener("resize", callbackFunc);
+			  window.addEventListener("scroll", callbackFunc);
+
+			})();
+		</script>
+		
+
+
+
+		<script> // this script is for the qualities
+			var svg = new Array();
+			var doc = document.getElementById("changeBG");
+			var color = ["#CDE6F4", "#9BC7D", "#82B5D1", "#9AB6C5"];
+			var i = 0;
+			function change() {
+			  doc.style.backgroundColor = color[i];
+			  i++;
+			  
+			  if(i > color.length - 1) {
+			    i = 0;
+			  }
+			}
+			setInterval(change, 4000);
+	</script>
+
+	<script>
+		var words = document.getElementsByClassName('word');
+		var wordArray = [];
+		var currentWord = 0;
+
+		words[currentWord].style.opacity = 1;
+		for (var i = 0; i < words.length; i++) {
+		  splitLetters(words[i]);
+		}
+
+		function changeWord() {
+			  var cw = wordArray[currentWord];
+			  var nw = currentWord == words.length-1 ? wordArray[0] : wordArray[currentWord+1];
+			  for (var i = 0; i < cw.length; i++) {
+			    animateLetterOut(cw, i);
+			  }
+	  
+			  for (var i = 0; i < nw.length; i++) {
+			    nw[i].className = 'letter behind';
+			    nw[0].parentElement.style.opacity = 1;
+			    animateLetterIn(nw, i);
+			  }
+	  
+			  currentWord = (currentWord == wordArray.length-1) ? 0 : currentWord+1;
+		}
+
+		function animateLetterOut(cw, i) {
+		  setTimeout(function() {
+		    cw[i].className = 'letter out';
+		  }, i*80);
+		}
+
+		function animateLetterIn(nw, i) {
+		  setTimeout(function() {
+		    nw[i].className = 'letter in';
+		  }, 340+(i*80));
+		}
+
+		function splitLetters(word) {
+		  var content = word.innerHTML;
+		  word.innerHTML = '';
+		  var letters = [];
+		  for (var i = 0; i < content.length; i++) {
+		    var letter = document.createElement('span');
+		    letter.className = 'letter';
+		    letter.innerHTML = content.charAt(i);
+		    word.appendChild(letter);
+		    letters.push(letter);
+		  }
+		  
+		  wordArray.push(letters);
+		}
+
+		changeWord();
+		setInterval(changeWord, 4000);
+	</script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script type="text/javascript">
+            
+            $(function() {
+                
+                setTimeout(function() {
+                    $('.fly-in-text').removeClass('texthidden');
+                }, 500);
+                
+            })();
+            
+        </script>
+</body>
+</html>
